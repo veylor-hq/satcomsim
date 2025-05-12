@@ -46,11 +46,27 @@ pip install -r requirements.txt
 
 3. Run the simulator:
 ```bash
-python main.py
+python3 main.py
 ```
 
 ## Usage
 
+### CLI Usage  
+#### Help  
+To view the command line interface (CLI) help, run:  
+```bash
+python3 cli.py --help
+```
+
+#### Example
+To run a simulation with a specific planet and satellite, use the following command:
+```bash
+python cli.py --norad-ids 25544 --duration 86400 --speed 1.0 --dt 1.0 --output-interval 10
+```
+This command will simulate the International Space Station (ISS) orbiting Earth.
+Add `--plot` to visualize the simulation results.   
+Add `--export` to save position logs to the file.  
+These commands and the rest are included in the help message.  
 ### Basic Controls
 
 - **Left-click and drag**: Rotate the view
