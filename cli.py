@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import json
+import os
 import sys
 import time
 import argparse
@@ -16,6 +17,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from collections import defaultdict
 
 step_log = []
+
 
 def plot_positions():
     """Plot the positions of satellites over time"""
@@ -40,7 +42,9 @@ def plot_positions():
 
     # Plot each satellite's points at once
     for sat, coords in positions_by_satellite.items():
-        ax.scatter(coords["x"], coords["y"], coords["z"], label=sat, s=1)  # s=1 to reduce marker size
+        ax.scatter(
+            coords["x"], coords["y"], coords["z"], label=sat, s=1
+        )  # s=1 to reduce marker size
 
     ax.set_xlabel("X Position (km)")
     ax.set_ylabel("Y Position (km)")
@@ -48,10 +52,13 @@ def plot_positions():
     ax.legend(markerscale=5)
     plt.show()
 
+
 def export_log():
     """Export the simulation log to a file"""
     print("Exporting simulation log...")
-    filename = f"simulation_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    if not os.path.exists("exports"):
+        os.makedirs("exports")
+    filename = f"exports/simulation_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
     with open(filename, "w") as f:
         json.dump(step_log, f, indent=4)
     print(f"Log exported to {filename}")
@@ -193,7 +200,7 @@ def main():
         "--plot",
         action="store_true",
         help="Enable plotting of satellite positions",
-        default=False,   
+        default=False,
     )
 
     parser.add_argument(
@@ -230,6 +237,7 @@ def main():
 
     if args.export_log:
         export_log()
+
 
 if __name__ == "__main__":
     main()

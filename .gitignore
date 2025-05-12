@@ -15,5 +15,6 @@ ENV/
 *.swo 
 
 # Export files  
+exports/
 simulation_log_*.json
 *.sim
