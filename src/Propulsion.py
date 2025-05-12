@@ -1,3 +1,6 @@
+import math
+
+
 class Propulsion:
     """
     Represents a propulsion system for orbital maneuvers

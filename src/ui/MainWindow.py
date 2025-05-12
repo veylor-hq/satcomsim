@@ -6,23 +6,23 @@ from PyQt5.QtCore import QDateTime, pyqtSlot, Qt
 import os
 import sys
 from datetime import datetime
-from src.SimulationDisplay import SimulationDisplay
+from src.ui.SimulationDisplay import SimulationDisplay
 from src.GuiConstants import GuiConstants
 from src.Constants import Constants
-from src.ConfigureWindow import ConfigureWindow
-from src.SatelliteWindow import SatelliteWindow
-from src.Monitor import Monitor
+from src.ui.ConfigureWindow import ConfigureWindow
+from src.ui.SatelliteWindow import SatelliteWindow
+from src.ui.Monitor import Monitor
 from src.Planet import Planet
 from src.Simulation import Simulation
 from src.Orbit import Orbit
 from src.Satellite import Satellite
 from src.Propulsion import Propulsion
 from src.config_manager import ConfigManager
-from src.SatelliteInfoPanel import SatelliteInfoPanel
+from src.ui.SatelliteInfoPanel import SatelliteInfoPanel
 
 class MainWindow(QMainWindow):
     """
-    The main application window, responsible for menus, UI, and interactions
+    The main application window, responsible for menus, ui, and interactions
     """
     
     def __init__(self, parent=None):

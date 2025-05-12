@@ -272,7 +272,7 @@ class SatelliteWindow(QDialog):
                                 f"Could not find satellite with NORAD ID {norad_id}.")
                 return
                 
-            # Convert to orbit parameters and update the UI
+            # Convert to orbit parameters and update the ui
             orbit = importer.convert_to_simulator_orbit(satellite, self.m_planet)
             
             # Update the satellite's orbit with the imported parameters

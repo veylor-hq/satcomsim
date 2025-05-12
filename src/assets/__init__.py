@@ -19,7 +19,7 @@ from propulsion import Propulsion
 
 class MainWindow(QMainWindow):
     """
-    The main application window, responsible for menus, UI, and interactions
+    The main application window, responsible for menus, ui, and interactions
     """
     
     def __init__(self, parent=None):

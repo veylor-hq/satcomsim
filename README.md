@@ -116,7 +116,7 @@ The simulator can import satellite data using NORAD IDs through the free KeepTra
 - `PointCart.py` - Cartesian coordinate representation
 - `Propulsion.py` - Satellite propulsion (placeholder for future expansion)
 
-UI Components:
+ui Components:
 - `MainWindow.py` - Main application window
 - `SimulationDisplay.py` - OpenGL display for 3D visualization
 - `SimulationGL.py` - Base OpenGL widget

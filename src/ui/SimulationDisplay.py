@@ -6,11 +6,12 @@ from PyQt5.QtOpenGL import QGLWidget
 from OpenGL.GL import *
 from OpenGL.GLU import *
 
-from src.SimulationGL import SimulationGL
+from src.ui.SatelliteWindow import SatelliteWindow
+from src.ui.SimulationGL import SimulationGL
 from src.Simulation import Simulation
 from src.GuiConstants import GuiConstants
 from src.Constants import Constants
-from src.TrackBallCamera import TrackBallCamera
+from src.ui.TrackBallCamera import TrackBallCamera
 from src.PointPol import PointPol
 import math
 
