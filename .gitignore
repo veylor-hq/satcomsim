@@ -13,3 +13,6 @@ ENV/
 .idea/
 *.swp
 *.swo 
+
+# Export files  
+simulation_log_*.json
