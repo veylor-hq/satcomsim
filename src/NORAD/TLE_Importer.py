@@ -1,3 +1,4 @@
+import math
 from skyfield.api import load, EarthSatellite
 import datetime
 from src.Orbit import Orbit
@@ -74,6 +75,13 @@ class TLEImporter:
         except Exception as e:
             logging.error(f"Error fetching TLE data: {str(e)}")
             return None
+
+    def calculate_true_anomaly(eccentricity, eccentric_anomaly):
+        """Calculate true anomaly from eccentric anomaly"""
+        return 2 * math.atan2(
+            math.sqrt(1 + eccentricity) * math.sin(eccentric_anomaly / 2),
+            math.sqrt(1 - eccentricity) * math.cos(eccentric_anomaly / 2),
+        )
 
     def convert_to_simulator_orbit(self, satellite, planet):
         """Convert a skyfield satellite to simulator orbit parameters"""

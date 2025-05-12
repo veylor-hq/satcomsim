@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import json
 import sys
 import time
 import argparse
@@ -10,6 +11,50 @@ from src.Planet import Planet
 from src.Satellite import Satellite
 from src.Constants import Constants
 from src.NORAD.TLE_Importer import TLEImporter
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+from collections import defaultdict
+
+step_log = []
+
+def plot_positions():
+    """Plot the positions of satellites over time"""
+    print("Plotting satellite positions...")
+    print(len(step_log), "steps recorded")
+
+    from mpl_toolkits.mplot3d import Axes3D
+    import matplotlib.pyplot as plt
+
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection="3d")
+
+    # Group positions by satellite
+    positions_by_satellite = defaultdict(lambda: {"x": [], "y": [], "z": []})
+
+    for entry in step_log:
+        sat = entry["satellite"]
+        pos = entry["position"]
+        positions_by_satellite[sat]["x"].append(pos["x"])
+        positions_by_satellite[sat]["y"].append(pos["y"])
+        positions_by_satellite[sat]["z"].append(pos["z"])
+
+    # Plot each satellite's points at once
+    for sat, coords in positions_by_satellite.items():
+        ax.scatter(coords["x"], coords["y"], coords["z"], label=sat, s=1)  # s=1 to reduce marker size
+
+    ax.set_xlabel("X Position (km)")
+    ax.set_ylabel("Y Position (km)")
+    ax.set_zlabel("Z Position (km)")
+    ax.legend(markerscale=5)
+    plt.show()
+
+def export_log():
+    """Export the simulation log to a file"""
+    print("Exporting simulation log...")
+    filename = f"simulation_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    with open(filename, "w") as f:
+        json.dump(step_log, f, indent=4)
+    print(f"Log exported to {filename}")
 
 
 def create_simulation(planet_name="Earth", sim_speed=1.0, dt=1.0):
@@ -88,6 +133,17 @@ def run_simulation(simulation, duration, output_interval=10, realtime=False):
                     print(
                         f"Position (km): X={pos.get_x():.2f}, Y={pos.get_y():.2f}, Z={pos.get_z():.2f}"
                     )
+                    step_log.append(
+                        {
+                            "time": simulation.t,
+                            "satellite": sat.get_name(),
+                            "position": {
+                                "x": pos.get_x(),
+                                "y": pos.get_y(),
+                                "z": pos.get_z(),
+                            },
+                        }
+                    )
                 except Exception as e:
                     print(f"Error retrieving position: {e}")
                     print(pos)
@@ -133,6 +189,20 @@ def main():
         help="Run simulation in real time, matching wall clock time",
     )
 
+    parser.add_argument(
+        "--plot",
+        action="store_true",
+        help="Enable plotting of satellite positions",
+        default=False,   
+    )
+
+    parser.add_argument(
+        "--export-log",
+        action="store_true",
+        help="Export simulation log to a file",
+        default=False,
+    )
+
     args = parser.parse_args()
 
     if not args.norad_ids:
@@ -155,6 +225,11 @@ def main():
 
     run_simulation(sim, args.duration, args.output_interval, args.realtime)
 
+    if args.plot:
+        plot_positions()
+
+    if args.export_log:
+        export_log()
 
 if __name__ == "__main__":
     main()
