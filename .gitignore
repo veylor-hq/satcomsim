@@ -16,3 +16,4 @@ ENV/
 
 # Export files  
 simulation_log_*.json
+*.sim
