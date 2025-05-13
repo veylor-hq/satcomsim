@@ -198,13 +198,6 @@ def main():
     )
 
     parser.add_argument(
-        "--plot",
-        action="store_true",
-        help="Enable plotting of satellite positions",
-        default=False,
-    )
-
-    parser.add_argument(
         "--export-log",
         action="store_true",
         help="Export simulation log to a file",
