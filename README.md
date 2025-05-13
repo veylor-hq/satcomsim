@@ -5,7 +5,9 @@ A 3D satellite orbital simulation and visualization tool built with Python and P
 <img width="1512" alt="image" src="https://github.com/user-attachments/assets/548ff6d5-7bcf-41cb-a867-18931a431623" />
 
 ## Overview
-
+### Important Note  
+Soon, this repository will only contain the Simalator code, server code and the client code will be moved to a separate repository.  
+### Description
 Satellite Simulator is an educational tool that allows users to create, visualize, and analyze satellite orbits around planets. The application provides a realistic 3D visualization of orbital mechanics and satellite movement, making it useful for students, educators, and space enthusiasts.
 
 ## Features
@@ -23,7 +25,7 @@ Satellite Simulator is an educational tool that allows users to create, visualiz
 
 ## Requirements
 
-- Python 3.6+
+- Python 3.10+
 - PyQt5
 - PyOpenGL
 - NumPy (optional for additional calculations)
