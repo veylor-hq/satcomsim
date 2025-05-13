@@ -1,21 +1,21 @@
 from PyQt5.QtWidgets import (QMainWindow, QAction, QMenu, QMessageBox, 
-                           QFileDialog, QStatusBar)
+                           QFileDialog, QStatusBar, QSizePolicy,)
 from PyQt5.QtGui import QIcon, QCloseEvent, QResizeEvent
 from PyQt5.QtCore import QDateTime, pyqtSlot, Qt
 import os
 import sys
 from datetime import datetime
-from simulation_display import SimulationDisplay
-from gui_constants import GuiConstants
-from constants import Constants
-from configure_window import ConfigureWindow
-from satellite_window import SatelliteWindow
-from monitor import Monitor
-from planet import Planet
-from simulation import Simulation
-from orbit import Orbit
-from satellite import Satellite
-from propulsion import Propulsion
+from src.ui.simulation_display import SimulationDisplay
+from src.utils.gui_constants import GuiConstants
+from src.utils.constants import Constants
+from src.ui.configure_window import ConfigureWindow
+from src.ui.satellite_window import SatelliteWindow
+from src.ui.monitor import Monitor
+from src.models.planet import Planet
+from src.simulation.simulation import Simulation
+from src.models.orbit import Orbit
+from src.models.satellite import Satellite
+from src.models.propulsion import Propulsion
 
 class MainWindow(QMainWindow):
     """

@@ -1,8 +1,8 @@
 import math
 from skyfield.api import load, EarthSatellite
 import datetime
-from src.Orbit import Orbit
-from src.Planet import Planet
+from src.models.orbit import Orbit
+from src.models.planet import Planet
 import numpy as np
 import logging
 import requests

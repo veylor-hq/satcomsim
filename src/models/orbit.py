@@ -1,7 +1,7 @@
 import math
-from src.Constants import Constants
-from src.PointPol import PointPol
-from src.Planet import Planet
+from src.utils.constants import Constants
+from src.models.point_pol import PointPol
+from src.models.planet import Planet
 
 
 class Orbit:

@@ -6,15 +6,16 @@ import sys
 import time
 import argparse
 from datetime import datetime
-from src.Propulsion import Propulsion
-from src.Simulation import Simulation
-from src.Planet import Planet
-from src.Satellite import Satellite
-from src.Constants import Constants
-from src.NORAD.TLE_Importer import TLEImporter
+from src.models.propulsion import Propulsion
+from src.simulation.simulation import Simulation
+from src.models.planet import Planet
+from src.models.satellite import Satellite
+from src.utils.constants import Constants
+from src.utils.tle_importer import TLEImporter
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from collections import defaultdict
+
 
 step_log = []
 

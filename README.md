@@ -61,7 +61,7 @@ python3 cli.py --help
 #### Example
 To run a simulation with a specific planet and satellite, use the following command:
 ```bash
-python cli.py --norad-ids 25544 --duration 86400 --speed 1.0 --dt 1.0 --output-interval 10
+python3 cli.py --norad-ids 25544 --duration 86400 --speed 1.0 --dt 1.0 --output-interval 10
 ```
 This command will simulate the International Space Station (ISS) orbiting Earth.
 Add `--plot` to visualize the simulation results.   
@@ -102,33 +102,6 @@ The simulator can import satellite data using NORAD IDs through the free KeepTra
    - Enter the NORAD ID
    - The simulator will fetch the latest TLE data
    - Configure additional parameters if needed
-
-
-## File Structure
-
-- `main.py` - Main entry point for the application
-- `Simulation.py` - Core simulation logic
-- `Oribit.py` - Orbital calculations and mechanics
-- `Planet.py` - Planet representation and properties
-- `Satellite.py` - Satellite representation and state
-- `Point.py` - Base class for points in 3D space
-- `PointPol.py` - Polar coordinate representation
-- `PointCart.py` - Cartesian coordinate representation
-- `Propulsion.py` - Satellite propulsion (placeholder for future expansion)
-
-ui Components:
-- `MainWindow.py` - Main application window
-- `SimulationDisplay.py` - OpenGL display for 3D visualization
-- `SimulationGL.py` - Base OpenGL widget
-- `ConfigureWindow.py` - Dialog for simulation configuration
-- `SatelliteWindow.py` - Dialog for satellite configuration
-- `Monitor.py` - Information display widget
-- `TrackBallCamera.py` - Camera control system
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
 
 ## Acknowledgements
 
