@@ -18,8 +18,6 @@ from pydantic import BaseModel
 import uvicorn
 from datetime import datetime
 
-
-# Assuming your existing modules are available
 from src.models.propulsion import Propulsion
 from src.simulation.simulation import Simulation
 from src.models.planet import Planet
@@ -28,7 +26,6 @@ from src.utils.constants import Constants
 from src.utils.tle_importer import TLEImporter
 
 
-# Data class for satellite state
 @dataclass
 class SatelliteState:
     timestamp: float
@@ -123,7 +120,6 @@ class StateManager:
             return result
 
 
-# Pydantic model for REST API responses
 class SatelliteStateModel(BaseModel):
     timestamp: float
     position: List[float]
@@ -407,7 +403,6 @@ def main():
         print(f"Time step: 1.0 seconds")
         run_simulation(sim, state_manager_api)
 
-        # Handle plotting and exporting after interruption
         if args.export_log:
             export_log(state_manager_api.state_manager)
 
