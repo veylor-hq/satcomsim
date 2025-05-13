@@ -112,4 +112,4 @@ The original repository can be found here by [FlorentF9](https://github.com/Flor
 Most of the code are highly modified or will be rewritten completly in the future, but the original code might still be present across the repository.
 
 ## License  
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License Version 2.0. See the [LICENSE](LICENSE) file for details.
