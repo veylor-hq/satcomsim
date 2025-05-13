@@ -107,14 +107,9 @@ The simulator can import satellite data using NORAD IDs through the free KeepTra
 
 ## Acknowledgements
 
-This simulator was ported from a C++/Qt implementation to Python/PyQt5 by [Logangutknecht](https://github.com/logangutknecht/SatelliteSimulator) to enhance accessibility and extensibility.
-The original repository can be found here by [FlorentF9](https://github.com/FlorentF9/SatelliteSimulator/).
+Part of this simulator(specifically general space-movement) was ported from a C++/Qt implementation to Python/PyQt5 by [Logangutknecht](https://github.com/logangutknecht/SatelliteSimulator).
+The original repository can be found here by [FlorentF9](https://github.com/FlorentF9/SatelliteSimulator/).  
+Most of the code are highly modified or will be rewritten completly in the future, but the original code might still be present across the repository.
 
-## Future Improvements
-
-- Integration with real-world satellite info
-- Visualization of ground tracks
-- Simulate "Take Image" function for satellite
-- Effects of orbital perturbations
-- Advanced propulsion/GNC modeling
-- Multiple planet simulations, Sun shadows
+## License  
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
