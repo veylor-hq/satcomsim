@@ -204,6 +204,13 @@ def main():
         default=False,
     )
 
+    parser.add_argument(
+        "--plot",
+        action="store_true",
+        help="Enable plotting of satellite positions",
+        default=False,
+    )
+
     args = parser.parse_args()
 
     if not args.norad_ids:
