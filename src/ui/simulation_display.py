@@ -7,7 +7,7 @@ from OpenGL.GL import *
 from OpenGL.GLU import *
 
 from src.ui.satellite_window import SatelliteWindow
-from src.ui.simulationGL import SimulationGL
+from src.ui.simulation_gl import SimulationGL
 from src.simulation.simulation import Simulation
 from src.utils.gui_constants import GuiConstants
 from src.utils.constants import Constants

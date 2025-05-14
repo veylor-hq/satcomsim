@@ -10,7 +10,7 @@ from src.utils.gui_constants import GuiConstants
 from src.utils.constants import Constants
 from src.ui.configure_window import ConfigureWindow
 from src.ui.satellite_window import SatelliteWindow
-from src.ui.monitor import Monitor
+from src.ui.monitor_widget import Monitor
 from src.models.planet import Planet
 from src.simulation.simulation import Simulation
 from src.models.orbit import Orbit
