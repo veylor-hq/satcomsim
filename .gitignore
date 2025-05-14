@@ -17,4 +17,7 @@ ENV/
 # Export files  
 exports/
 simulation_log_*.json
-*.sim
+*.sim  
+
+# Random stuff  
+.DS_Store
