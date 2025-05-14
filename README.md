@@ -1,4 +1,4 @@
-# Satellite Simulator
+# Satellite Communication Simulator
 ## Overview
 ### Important Note  
 Soon, this repository will only contain the Simalator code, server code and the client code will be moved to a separate repository.  
