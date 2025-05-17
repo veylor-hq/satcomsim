@@ -1,7 +1,7 @@
-from src.models.orbit import Orbit
-from src.models.planet import Planet
-from src.models.propulsion import Propulsion
-from src.models.point_pol import PointPol
+from satcomsim.models.orbit import Orbit
+from satcomsim.models.planet import Planet
+from satcomsim.models.propulsion import Propulsion
+from satcomsim.models.point_pol import PointPol
 
 
 class Satellite:

@@ -6,12 +6,12 @@ import sys
 import time
 import argparse
 from datetime import datetime
-from src.models.propulsion import Propulsion
-from src.simulation.simulation import Simulation
-from src.models.planet import Planet
-from src.models.satellite import Satellite
-from src.utils.constants import Constants
-from src.utils.tle_importer import TLEImporter
+from satcomsim.models.propulsion import Propulsion
+from satcomsim.simulation.simulation import Simulation
+from satcomsim.models.planet import Planet
+from satcomsim.models.satellite import Satellite
+from satcomsim.utils.constants import Constants
+from satcomsim.utils.tle_importer import TLEImporter
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from collections import defaultdict

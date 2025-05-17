@@ -1,6 +1,6 @@
 import math
-from src.models.point import Point
-from src.utils.constants import Constants
+from satcomsim.models.point import Point
+from satcomsim.utils.constants import Constants
 
 
 class PointCart(Point):

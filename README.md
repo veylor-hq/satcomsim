@@ -1,12 +1,7 @@
 # Satellite Communication Simulator
 ## Overview
-### Important Note  
-Soon, this repository will only contain the Simalator code, server code and the client code will be moved to a separate repository.  
-
 ## Requirements
 - Python 3.10+
-- PyQt5
-- PyOpenGL
 - NumPy (optional for additional calculations)
 - matplotlib (for satellite model visualization)
 - skyfield (for satellite position calculations)

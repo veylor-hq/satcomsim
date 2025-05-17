@@ -1,7 +1,7 @@
 import math
-from src.utils.constants import Constants
-from src.models.point_pol import PointPol
-from src.models.planet import Planet
+from satcomsim.utils.constants import Constants
+from satcomsim.models.point_pol import PointPol
+from satcomsim.models.planet import Planet
 
 
 class Orbit:

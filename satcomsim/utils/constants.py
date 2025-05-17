@@ -31,7 +31,7 @@ class Constants:
     autoPlay = True  # Start simulation automatically?
     verbose = False  # Print position on stdout?
     writeLog = True  # Keep log file?
-    defaultImgPath = "src/assets/images/earth_4k.jpg"  # Default planet texture
+    defaultImgPath = "satcomsim/assets/images/earth_4k.jpg"  # Default planet texture
     defaultPlanetName = "Earth"
     minPlanetRadius = 0.1  # Minimal radius of a planet (km)
     maxPlanetRadius = 1.0e6  # Maximum radius of a planet (km)

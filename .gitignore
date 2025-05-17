@@ -21,3 +21,7 @@ simulation_log_*.json
 
 # Random stuff  
 .DS_Store
+
+build/
+dist/
+satcomsim.egg-info/

@@ -1,9 +1,9 @@
 import os
 import sys
 import datetime
-from src.utils.constants import Constants
-from src.models.satellite import Satellite
-from src.models.planet import Planet
+from satcomsim.utils.constants import Constants
+from satcomsim.models.satellite import Satellite
+from satcomsim.models.planet import Planet
 
 
 class Simulation:

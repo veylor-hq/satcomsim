@@ -1,6 +1,6 @@
 import math
-from src.models.point import Point
-from src.models.point_cart import PointCart
+from satcomsim.models.point import Point
+from satcomsim.models.point_cart import PointCart
 
 
 class PointPol(Point):

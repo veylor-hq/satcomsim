@@ -1,5 +1,5 @@
 import math
-from src.utils.constants import Constants
+from satcomsim.utils.constants import Constants
 
 
 class Planet:
